@@ -17,7 +17,7 @@ package amino_test
 import (
 	"fmt"
 
-	"github.com/tendermint/go-amino"
+	"github.com/evdatsion/go-amino"
 )
 
 func Example() {

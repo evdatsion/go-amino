@@ -1,4 +1,4 @@
-module github.com/tendermint/go-amino
+module github.com/evdatsion/go-amino
 
 go 1.12
 

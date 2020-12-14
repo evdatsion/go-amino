@@ -13,7 +13,7 @@ and persistence objects.
 developed in Go.  But Amino is not just for Go — if you'd like to contribute by
 creating supporting libraries in various languages from scratch, or by adapting
 existing Protobuf3 libraries, please [open an issue on
-GitHub](https://github.com/tendermint/go-amino/issues)!
+GitHub](https://github.com/evdatsion/go-amino/issues)!
 
 
 # Why Amino?
@@ -66,7 +66,7 @@ duplication and help streamline development from inception to maturity.
 ## Amino in the Wild
 
 * Amino:binary spec in [Tendermint](
-https://github.com/tendermint/tendermint/blob/master/docs/spec/blockchain/encoding.md)
+https://github.com/evdatsion/tendermint/blob/master/docs/spec/blockchain/encoding.md)
 
 
 # Amino Spec

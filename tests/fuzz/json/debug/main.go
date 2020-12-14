@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/tendermint/go-amino"
-	"github.com/tendermint/go-amino/tests"
+	"github.com/evdatsion/go-amino"
+	"github.com/evdatsion/go-amino/tests"
 )
 
 func main() {
