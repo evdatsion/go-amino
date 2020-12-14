@@ -51,13 +51,13 @@ any problems (crashers) on the commandline. You'll find details of those crasher
 If you find a crasher related to your changes please fix it, or file an issue containing the crasher information.
 
 
-[contribution guidelines]: https://github.com/evdatsion/tendermint/blob/master/CONTRIBUTING.md
+[contribution guidelines]: https://github.com/evdatsion/evdatsion/blob/master/CONTRIBUTING.md
 [coding repo]: https://github.com/evdatsion/coding
 [gofuzz]: https://github.com/google/gofuzz
 [go-fuzzer]: https://github.com/dvyukov/go-fuzz
 [protobuf]: https://developers.google.com/protocol-buffers/
 [build flag]: https://github.com/evdatsion/go-amino/blob/faa6e731944e2b7b6a46ad202902851e8ce85bee/tests/proto3/proto3_compat_test.go#L1
-[tendermint]: https://github.com/evdatsion/tendermint/
-[Gopkg.toml]: https://github.com/evdatsion/tendermint/blob/master/Gopkg.toml
+[tendermint]: https://github.com/evdatsion/evdatsion/
+[Gopkg.toml]: https://github.com/evdatsion/evdatsion/blob/master/Gopkg.toml
 
 
