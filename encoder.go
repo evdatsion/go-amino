@@ -42,7 +42,9 @@ func EncodeVarint(w io.Writer, i int64) (err error) {
 }
 
 func VarintSize(i int64) int {
-	return UvarintSize(uint64((uint64(i) << 1) ^ uint64(i>>63)))
+	var buf [10]byte
+	n := binary.PutVarint(buf[:], i)
+	return n
 }
 
 //----------------------------------------
