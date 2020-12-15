@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/tendermint/go-amino"
+	"github.com/evdatsion/go-amino"
 )
 
 func main() {
