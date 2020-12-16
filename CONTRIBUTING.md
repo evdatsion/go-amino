@@ -1,7 +1,7 @@
 # Contributing
 
 Thank you for considering making contributions to go-amino! This repository follows the [contribution guidelines] of 
-tendermint and the corresponding [coding repo]. Please take a look if you are not already familiar with those.
+aphelion and the corresponding [coding repo]. Please take a look if you are not already familiar with those.
 
 Besides what you can find in aforementioned resources, there are a few things to consider specific to go-amino. 
 They are outlined below.
@@ -14,11 +14,11 @@ Amino aims to be and stay [protobuf] compatible. Please, ensure that any change 
 Basic compatibility is ensured by tests. To not introduce a protobuf dependency, these tests are not run with every test 
 run, though. You need to turn on a [build flag] to build and run those tests.
 
-### Tendermint
+### Aphelion
 
-Please ensure that tendermint still passes all tests when run with your changes. You can do so by cloning [tendermint].
+Please ensure that aphelion still passes all tests when run with your changes. You can do so by cloning [aphelion].
 Then update the dependency to your commit (or release) in the corresponding [Gopkg.toml] and run `dep ensure -v` to get 
-tendermint build with your amino version. Finally, run `make test` (all in the tendermint project directory).
+aphelion build with your amino version. Finally, run `make test` (all in the aphelion project directory).
 
 
 ## Fuzzers
@@ -57,7 +57,7 @@ If you find a crasher related to your changes please fix it, or file an issue co
 [go-fuzzer]: https://github.com/dvyukov/go-fuzz
 [protobuf]: https://developers.google.com/protocol-buffers/
 [build flag]: https://github.com/evdatsion/go-amino/blob/faa6e731944e2b7b6a46ad202902851e8ce85bee/tests/proto3/proto3_compat_test.go#L1
-[tendermint]: https://github.com/evdatsion/evdatsion/
+[aphelion]: https://github.com/evdatsion/evdatsion/
 [Gopkg.toml]: https://github.com/evdatsion/evdatsion/blob/master/Gopkg.toml
 
 
