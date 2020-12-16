@@ -37,7 +37,7 @@ func main() {
 		Uint64:  0x8000000000000000,
 		Uvarint: 0x8000000000000000,
 		Uint:    0x80000000,
-		String:  "Tendermint!",
+		String:  "Aphelion!",
 		Bytes:   []byte("DEEZMINTS"),
 		Time:    time.Date(2018, 3, 2, 21, 10, 12, 1e5, time.UTC),
 	}
@@ -57,7 +57,7 @@ func main() {
 		Uint64Ar:  [4]uint64{0x80808080FFFFFF77, 0x110202FFFFFFFF77, 0xAE21FF0051F23F77, 0x1045880011AABBCC},
 		UvarintAr: [4]uint64{0x99808080FFFFFF77, 0xFF0202FFFFFFFF77, 0xAE21FF0051F23F77, 0x1045880011AABBCC},
 		UintAr:    [4]uint{0x80808080, 0x110202FF, 0xAE21FF00, 0x10458800},
-		StringAr:  [4]string{"Tendermint", "Fuzzing", "Blue", "410DDC670CF9BFD7"},
+		StringAr:  [4]string{"Aphelion", "Fuzzing", "Blue", "410DDC670CF9BFD7"},
 		TimeAr:    [4]time.Time{time.Time{}, time.Time{}.Add(1000 * hour * 24), time.Time{}.Add(20 * time.Minute)},
 	}
 
@@ -75,7 +75,7 @@ func main() {
 		Uint64Sl:  []uint64{0x110202FFFFFFFF77, 0xAE21FF0051F23F77, 0x80808080FFFFFF77, 0x1045880011AABBCC},
 		UvarintSl: []uint64{0x1045880011AABBCC, 0x99808080FFFFFF77, 0xFF0202FFFFFFFF77, 0xAE21FF0051F23F77},
 		UintSl:    []uint{0x80808080, 0x110202FF, 0xAE21FF00, 0x10458800},
-		StringSl:  []string{"Tendermint", "Fuzzing", "Blue", "410DDC670CF9BFD7"},
+		StringSl:  []string{"Aphelion", "Fuzzing", "Blue", "410DDC670CF9BFD7"},
 		TimeSl:    []time.Time{(time.Time{}).Add(60 * 24 * time.Minute), (time.Time{}).Add(1000 * hour * 24), time.Time{}.Add(20 * time.Minute)},
 	}
 
@@ -131,10 +131,10 @@ func main() {
 	}
 
 	cdc := amino.NewCodec()
-	cdc.RegisterConcrete(&tests.ComplexSt{}, "com.tendermint/complex_st", nil)
-	cdc.RegisterConcrete(&tests.PrimitivesStruct{}, "com.tendermint/primitive_st", nil)
-	cdc.RegisterConcrete(&tests.ArraysStruct{}, "com.tendermint/arrays_st", nil)
-	cdc.RegisterConcrete(&tests.SlicesStruct{}, "com.tendermint/slices_st", nil)
+	cdc.RegisterConcrete(&tests.ComplexSt{}, "com.aphelion/complex_st", nil)
+	cdc.RegisterConcrete(&tests.PrimitivesStruct{}, "com.aphelion/primitive_st", nil)
+	cdc.RegisterConcrete(&tests.ArraysStruct{}, "com.aphelion/arrays_st", nil)
+	cdc.RegisterConcrete(&tests.SlicesStruct{}, "com.aphelion/slices_st", nil)
 
 	for i, seed := range seeds {
 		blob, err := cdc.MarshalBinaryLengthPrefixed(seed)

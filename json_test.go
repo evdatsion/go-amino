@@ -82,11 +82,11 @@ func TestMarshalJSON(t *testing.T) {
 		}, // #17
 		{
 			withCustomMarshaler{A: &aPointerField{Foo: intPtr(12)}, F: customJSONMarshaler(10)},
-			`{"fx":"Tendermint","A":{"Foo":"12"}}`, "",
+			`{"fx":"Aphelion","A":{"Foo":"12"}}`, "",
 		}, // #18
 		{
 			func() json.Marshaler { v := customJSONMarshaler(10); return &v }(),
-			`"Tendermint"`, "",
+			`"Aphelion"`, "",
 		}, // #19
 
 		// We don't yet support interface pointer registration i.e. `*interface{}`
@@ -352,7 +352,7 @@ func TestJSONCodecRoundTrip(t *testing.T) {
 				Tr: Transport{
 					Vehicle: Boat("Oracle"),
 				},
-				Comment: "To the Cosmos! баллинг в космос",
+				Comment: "To the Libonomy! баллинг в космос",
 				Data:    []byte("祝你好运"),
 			},
 			out: new(allInclusive),
@@ -360,7 +360,7 @@ func TestJSONCodecRoundTrip(t *testing.T) {
 				Tr: Transport{
 					Vehicle: Boat("Oracle"),
 				},
-				Comment: "To the Cosmos! баллинг в космос",
+				Comment: "To the Libonomy! баллинг в космос",
 				Data:    []byte("祝你好运"),
 			},
 		},
@@ -449,7 +449,7 @@ type customJSONMarshaler int
 var _ json.Marshaler = (*customJSONMarshaler)(nil)
 
 func (cm customJSONMarshaler) MarshalJSON() ([]byte, error) {
-	return []byte(`"Tendermint"`), nil
+	return []byte(`"Aphelion"`), nil
 }
 
 type withCustomMarshaler struct {
