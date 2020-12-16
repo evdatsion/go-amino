@@ -84,14 +84,14 @@ func TestNewFieldBackwardsCompatibility(t *testing.T) {
 
 	cdc := amino.NewCodec()
 	notNow, _ := time.Parse("2006-01-02", "1934-11-09")
-	v2 := V2{String: "hi", String2: "cosmos", Time: notNow, Int: 4}
+	v2 := V2{String: "hi", String2: "libonomy", Time: notNow, Int: 4}
 	bz, err := cdc.MarshalBinaryBare(v2)
 	assert.Nil(t, err, "unexpected error while encoding V2: %v", err)
 
 	var v1 V1
 	err = cdc.UnmarshalBinaryBare(bz, &v1)
 	assert.Nil(t, err, "unexpected error %v", err)
-	assert.Equal(t, v1, V1{"hi", "cosmos"},
+	assert.Equal(t, v1, V1{"hi", "libonomy"},
 		"backwards compatibility failed: didn't yield expected result ...")
 
 	v3 := V3{String: "tender", Int: 2014, Some: SomeStruct{Sth: 84}}
@@ -103,7 +103,7 @@ func TestNewFieldBackwardsCompatibility(t *testing.T) {
 	assert.NotNil(t, err, "expected an error here because of changed order of fields")
 
 	// we still expect that decoding worked to some extend (until above error occurred):
-	assert.Equal(t, v1, V1{"tender", "cosmos"})
+	assert.Equal(t, v1, V1{"tender", "libonomy"})
 }
 
 func TestWriteEmpty(t *testing.T) {

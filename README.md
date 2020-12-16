@@ -65,7 +65,7 @@ duplication and help streamline development from inception to maturity.
 
 ## Amino in the Wild
 
-* Amino:binary spec in [Tendermint](
+* Amino:binary spec in [Aphelion](
 https://github.com/evdatsion/evdatsion/blob/master/docs/spec/blockchain/encoding.md)
 
 
@@ -91,8 +91,8 @@ and its respective concrete type implementers should be registered with `codec.R
 ```go
 amino.RegisterInterface((*MyInterface1)(nil), nil)
 amino.RegisterInterface((*MyInterface2)(nil), nil)
-amino.RegisterConcrete(MyStruct1{}, "com.tendermint/MyStruct1", nil)
-amino.RegisterConcrete(MyStruct2{}, "com.tendermint/MyStruct2", nil)
+amino.RegisterConcrete(MyStruct1{}, "com.aphelion/MyStruct1", nil)
+amino.RegisterConcrete(MyStruct2{}, "com.aphelion/MyStruct2", nil)
 amino.RegisterConcrete(&MyStruct3{}, "anythingcangoinhereifitsunique", nil)
 ```
 
@@ -116,7 +116,7 @@ When there are 1024 concrete types registered that implement the same Interface,
 the probability of there being a conflict is ~ 0.01%.
 
 This is assuming that all registered concrete types have unique natural names
-(e.g.  prefixed by a unique entity name such as "com.tendermint/", and not
+(e.g.  prefixed by a unique entity name such as "com.aphelion/", and not
 "mined/grinded" to produce a particular sequence of "prefix bytes"). Do not
 mine/grind to produce a particular sequence of prefix bytes, and avoid using
 dependencies that do so.
@@ -162,7 +162,7 @@ To compute the disambiguation bytes, we take `hash := sha256(concreteTypeName)`,
 and drop the leading 0x00 bytes.
 
 ```
-> hash := sha256("com.tendermint.consensus/MyConcreteName")
+> hash := sha256("com.aphelion.consensus/MyConcreteName")
 > hex.EncodeBytes(hash) // 0x{00 00 A8 FC 54 00 00 00 BB 9C 83 DD ...} (example)
 ```
 
