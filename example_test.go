@@ -17,7 +17,7 @@ package amino_test
 import (
 	"fmt"
 
-	"github.com/evdatsion/go-amino"
+	"github.com/libonomy/go-amino"
 )
 
 func Example() {

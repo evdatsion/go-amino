@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/evdatsion/go-amino"
+	"github.com/libonomy/go-amino"
 )
 
 type SimpleStruct struct {

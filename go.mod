@@ -1,4 +1,4 @@
-module github.com/evdatsion/go-amino
+module github.com/libonomy/go-amino
 
 go 1.12
 

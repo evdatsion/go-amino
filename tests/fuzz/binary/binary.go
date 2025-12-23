@@ -1,8 +1,8 @@
 package fuzz_binary
 
 import (
-	"github.com/evdatsion/go-amino"
-	"github.com/evdatsion/go-amino/tests"
+	"github.com/libonomy/go-amino"
+	"github.com/libonomy/go-amino/tests"
 )
 
 //-------------------------------------

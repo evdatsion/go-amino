@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/evdatsion/go-amino"
-	"github.com/evdatsion/go-amino/tests"
+	"github.com/libonomy/go-amino"
+	"github.com/libonomy/go-amino/tests"
 )
 
 func main() {
